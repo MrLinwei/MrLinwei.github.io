@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width:100%;
+            height: 50%;
+            background-color: #b3d4fc;
+        }
+        p{
+            display:block;
+            width:100px;
+            height:100px;
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p></p>
+    </div>
+    <script>
+        var i = 0;
+        var div = document.querySelector("div");
+        var p = document.querySelector("p");
+        div.addEventListener("touchstart", function (ele) {
+            p.innerHTML = ele.target.tagName + "," + i++;
+        })
+    </script>
+</body>
+</html>
