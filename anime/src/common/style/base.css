@@ -1,0 +1,14 @@
+body{
+  -webkit-tap-highlight-color:transparent;
+  tap-highlight-color:transparent;
+}
+.main{
+  position: absolute;
+  top: 2.5rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:#F5F5EE;
+  overflow: hidden;
+  overflow-y:auto;
+}
