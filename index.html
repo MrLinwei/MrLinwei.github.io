@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo</title>
+	<style>
+		.content {
+		    width: 80%;
+		    margin-left: auto;
+		    margin-right: auto;
+		    margin-top: 100px;
+		    color: #666;
+		    text-align: center;
+		}
+		.words {
+		    height: 100px;
+		    line-height: 100px;
+		}
+		.link {
+		    margin-top: 10px;
+		}
+		.content a{
+			font-family: "Roboto Condensed", Arial, sans-serif;
+		    background-color: #fff;
+		    font-size: 16px;
+		    line-height: normal;
+		    font-style: normal;
+		    color: #8C8C8C;
+		    font-weight: 300;
+		    text-decoration: none;
+		}
+		.btn{
+			display: inline-block;
+		    padding: 6px 12px;
+		    margin-bottom: 0;
+		    font-size: 14px;
+		    line-height: 1.42857143;
+		    text-align: center;
+		    white-space: nowrap;
+		    vertical-align: middle;
+		    -ms-touch-action: manipulation;
+		    touch-action: manipulation;
+		    cursor: pointer;
+		    -webkit-user-select: none;
+		    -moz-user-select: none;
+		    -ms-user-select: none;
+		    user-select: none;
+		    background-image: none;
+		    border: 1px solid transparent;
+		    border-radius: 4px;
+		    border-color: #ccc;
+		}
+	</style>
+</head>
+<body>
+
+<section class="content">
+    <h1>Hello World</h1>
+    <div class="words">&nbsp</div>
+    <div class="btns">
+        <a href="https://github.com/MrLinwei/MrLinwei.github.io/tree/master/anime" class="btn">anime</a>
+        <a href="https://mrlinwei.github.io/Food_Sense/FoodSense.html" class="btn">Food_Sense</a>
+        <a href="" class="btn">demo</a>
+        <a href="" class="btn">demo</a>
+        <a href="" class="btn">demo</a>
+
+    </div>
+    <div class="link">
+        <p>@MrLinwei</p>
+        <a href="https://github.com/MrLinwei/MrLinwei.github.io">GitHub</a>
+        <a href="https://www.zhihu.com/#signin">@知乎</a>
+    </div>
+</section>
+
+</body>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script>
+	var s = '欢迎来到我的博客';
+	var con = $('.words');
+	var index = 0;
+	var length = s.length;
+	var tId = null;
+	function start() {
+	    con.text('');
+	    tId = setInterval(function() {
+	        con.append(s.charAt(index));
+	        if (index++ === length) {
+	            clearInterval(tId);
+	            index = 0;
+	            start()
+	        }
+	    }, 300);
+	}
+	start();
+</script>
+</html>
